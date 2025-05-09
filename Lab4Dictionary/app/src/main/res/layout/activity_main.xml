@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dictionary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Search Bar -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/search_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter word to search"
+            app:startIconDrawable="@android:drawable/ic_menu_search"
+            app:endIconMode="clear_text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/search_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:imeOptions="actionSearch"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Result Area -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <TextView
+                android:id="@+id/result_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:padding="16dp"
+                android:textColor="#333333"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>
